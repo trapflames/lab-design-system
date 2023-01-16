@@ -1,4 +1,4 @@
-name: Deploy docs
+name: Deploy Storybook
 
 on:
   push:
@@ -20,8 +20,8 @@ jobs:
           cache-dependency-path: '**/package-lock.json'
 
       - name: Install dependencies
-      run: npm ci
-      
+        run: npm ci
+
       - name: Build Storybook
         run: npm run build-storybook
 
